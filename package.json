@@ -1,0 +1,37 @@
+{
+  "name": "dexra-template-elizaos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "elizaOS agent that trades Solana tokens with a Dexra check before every buy. Dry run by default.",
+  "license": "MIT",
+  "type": "module",
+  "packageType": "project",
+  "main": "src/index.ts",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "scripts": {
+    "start": "elizaos start",
+    "dev": "elizaos dev",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/__tests__/*.test.ts",
+    "dry-run": "tsx scripts/dry-run.ts"
+  },
+  "dependencies": {
+    "@dexra-dev/client": "^0.1.1",
+    "@dexra-dev/plugin-elizaos": "0.1.0",
+    "@elizaos/cli": "1.7.2",
+    "@elizaos/core": "1.7.2",
+    "@elizaos/plugin-anthropic": "1.5.12",
+    "@elizaos/plugin-bootstrap": "1.7.2",
+    "@elizaos/plugin-mcp": "1.8.0",
+    "@elizaos/plugin-openai": "1.6.0",
+    "@elizaos/plugin-sql": "1.7.2",
+    "@solana/kit": "^8.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3"
+  }
+}
